@@ -1,0 +1,49 @@
+/*specificity 0010 */
+.container{
+  max-width: 900px;
+  margin:0 auto;
+}
+/* Desendant
+sp - 0002 two tag names */
+nav ul{
+  display:flex;
+  list-style-type:none;
+  padding:0;
+  margin:0;
+}
+/* desendant
+sp- 0003 three tag names*/
+nav ul li{
+flex:1;
+}
+/*child only the direct after the main
+sp- 0002*/
+main>p{
+font-size:1.25rem;
+}
+/* adjcent
+sp - 0002 */
+h2+p{
+background-color: black;
+color:white;
+padding: 1rem;
+}
+/* all sibilings*/
+.stars span:hover~span{
+opacity: 0.25;
+}
+.stars span{
+  cursor:pointer;
+}
+/*attribute
+= is exact
+^= begins with
+*= contains
+$= ends with */
+a[href="#"]{
+  color: tomato;
+}
+a[href^="http"]{
+  border-left: 4px solid tomato;
+  padding-left: 2px;
+}
